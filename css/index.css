@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+:root {
+    /* Main Colors */
+    --main-background-color: #070724;
+
+    /* Font and Font Size */
+    --header-font: 'Antonio', sans-serif;
+    --body-font: 'League Spartan', sans-serif;
+
+    /* Font Colors */
+    --main-font-color: #FFFFFF;
+    --sub-font-color: #838391;
+}
+
+html, body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../assets/background-stars.svg'), var(--main-background-color) no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--body-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+.navbar {
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.navbar-brand-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    margin: auto;
+}
+
+.navbar-brand {
+    color: var(--main-font-color);
+    font-size: 1.5em;
+}
+
+.nav-link {
+    color: var(--sub-font-color);
+    padding: 0.2rem;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar-toggler {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        border: none;
+        background-color: transparent;
+    }
+   
+    .navbar-nav {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar-brand-container {
+        grid-column: span 2;
+        margin: 0;
+    }
+    .navbar-nav {
+        grid-column: span 2;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;   
+        padding: 1em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .navbar {
+        display: flex;
+    }
+    .navbar-nav {
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .nav-link {
+        grid-column: span 1;
+    }
+    
+}
