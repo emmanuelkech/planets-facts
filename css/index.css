@@ -29,7 +29,7 @@
 html, body {
     margin: 0 auto;
     box-sizing: border-box;
-    width: 100vw;
+    width: auto;
     min-height: 100vh;
     background: url('../assets/background-stars.svg'), var(--main-background-color) no-repeat center center fixed;
     background-size: cover;
@@ -95,6 +95,15 @@ h1, h2 {
     font-size: 1.5em;
 }
 
+.navbar-nav {
+    text-align: center;
+    height: 100%;
+}
+
+.navbar-nav :active {
+    border-top: 4px solid var(--mercury-color);
+}
+
 .nav-link {
     color: var(--sub-font-color);
     padding: 0.2rem;
@@ -113,8 +122,42 @@ h1, h2 {
 }
 
 /* Styling Main Section */
+main{
+    width: auto;
+    min-height: 100vh;
+}
+
+.main-section {
+    width: auto;
+    min-height: 100vh;
+}
+
+.planet-image-section {
+    text-align: center;
+    padding: 2em;
+}
+
+.definition-section{
+}
+
+
 .menu-item {
+    background-color: var(--main-background-color);
     border: 1px solid var(--sub-font-color);
+}
+
+.menu :hover {
+    border: none;
+    background-color: var(--hover-color);
+}
+
+.menu :active {
+    border: none;
+    background-color: var(--mercury-color);
+}
+
+.spec-section {
+    margin-top: 2em;
 }
 
 .spec-item {
@@ -131,12 +174,13 @@ h1, h2 {
 .spec-value {
     color: var(--main-font-color);
     font-weight: bold;
-    font-size: 2em;
     margin: 0;
 }
 
 .definition-title {
     color: var(--main-font-color);
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
 .overview {
@@ -220,6 +264,9 @@ h1, h2 {
         color: var(--sub-font-color);
         text-transform: uppercase;
         padding: 0 1rem 0 1rem;
+    }
+
+    .mobile-menu-section :hover {
         border-bottom: 1px solid var(--sub-font-color);
     }
 
@@ -239,10 +286,10 @@ h1, h2 {
         padding: 1em;
     }
 
-    .planet-image-section {
-    }
     .definition-section {
+        text-align: center;
     }
+
     .menu {
         display: none;
     }
@@ -250,6 +297,11 @@ h1, h2 {
     .spec-section {
         display: grid;
         grid-gap: 0.5em;
+    }
+
+    .spec-item {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -308,6 +360,14 @@ h1, h2 {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1em;
     }
+
+    .spec-title {
+        font-size: 0.8em;
+    }
+
+    .spec-value {
+        font-size: 1.2em;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -334,12 +394,31 @@ h1, h2 {
     .planet-image-section {
     }
     .definition-section {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .definition {
+        grid-column: span 2;
+    }
+
+    .menu {
+        grid-column: span 2;
+    }
+
     .spec-section {
         grid-column: span 2;
+    }
+
+    .spec-title {
+        font-size: 1em;
+    }
+
+    .spec-value {
+        font-size: 2em;
     }
     
 }
