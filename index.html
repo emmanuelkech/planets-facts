@@ -34,7 +34,7 @@
     <hr>
   </header>
   <main>
-    <!-- <div class="hamburger-menu">
+    <div class="hamburger-menu">
       <div class="hamburger-menu-item border">
         <div class="item-color-container"><button class="item-color-mercury"></button></div>
         <div class="item-title-container"><a class="item-title">Mercury</a></div>
@@ -75,62 +75,79 @@
         <div class="item-title-container"><a class="item-title">Neptune</a></div>
         <div class="item-icon-container"><img class="item-icon" src="./assets/icon-chevron.svg" alt=""></div>
       </div>
-    </div> -->
-    <!-- <div class="mobile-menu-section">
-      <div class="mobile-menu-section-item">
-        <a class="mobile-menu-link">Overview</a>
-      </div>
-      <div class="mobile-menu-section-item">
-        <a class="mobile-menu-link">Structure</a>
-      </div>
-      <div class="mobile-menu-section-item">
-        <a class="mobile-menu-link">Surface</a>
-      </div>
-    </div> -->
-    <div class="main-section">
-      <div class="planet-image-section">
-        <img src="./assets/planet-mercury.svg" alt="image of mercury">
-      </div>
-      <div class="definition-section">
-        <div class="definition">
-          <p class="definition-title">Mercury</p>
-          <p class="overview">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
-          <p class="overview">Source: <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">Wikipedia </a><span><img src="./assets/icon-source.svg" alt=""></span></p>
+    </div>
+    <div class="mobile-main">
+      <div class="mobile-menu-section">
+        <div class="mobile-menu-section-item mobile-overview">
+          <a class="mobile-menu-link">Overview</a>
         </div>
-        <div class="menu">
-          <button class="menu-item">
-            <p class="menu-item-number">01</p>
-            <p class="menu-item-title">Overview</p>
-          </button>
-          <button class="menu-item">
-            <p class="menu-item-number">02</p>
-            <p class="menu-item-title">internal structure</p>
-          </button>
-          <button class="menu-item">
-            <p class="menu-item-number">03</p>
-            <p class="menu-item-title">surface geology</p>
-          </button>
+        <div class="mobile-menu-section-item mobile-structure">
+          <a class="mobile-menu-link">Structure</a>
+        </div>
+        <div class="mobile-menu-section-item mobile-surface">
+          <a class="mobile-menu-link">Surface</a>
         </div>
       </div>
-      <div class="spec-section">
-        <div class="spec-item">
-          <p class="spec-title">Rotation time</p>
-          <p class="spec-value">58.6 days</p>
+      <div class="main-section">
+        <div class="planet-image-section">
+          <img class="planet-image" src="./assets/planet-mercury.svg" alt="image of mercury">
+          <img class="planet-internal-image" src="./assets/planet-mercury-internal.svg" alt="internal image of mercury">
+          <img class="planet-geology" src="./assets/geology-mercury.png" alt="geology of mercury">
         </div>
-        <div class="spec-item">
-          <p class="spec-title">Revolution time</p>
-          <p class="spec-value">87.97 days</p>
+        <div class="definition-section">
+          <div class="definition">
+            <p class="definition-title">Mercury</p>
+            <div class="overall-container">
+              <div class="overview-container">
+                <p class="the-overview define">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+                <p class="the-overview define">Source: <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">Wikipedia </a><span><img src="./assets/icon-source.svg" alt=""></span></p>
+              </div>
+              <div class="structure-container">
+                <p class="internal-structure define">Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.</p>
+                <p class="internal-structure define">Source: <a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure" target="_blank">Wikipedia </a><span><img src="./assets/icon-source.svg" alt=""></span></p>
+              </div>
+              <div class="geology-container">
+                <p class="surface-geology define">Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.</p>
+                <p class="surface-geology define">Source: <a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology" target="_blank">Wikipedia </a><span><img src="./assets/icon-source.svg" alt=""></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <button class="menu-item overview">
+              <p class="menu-item-number">01</p>
+              <p class="menu-item-title">overview</p>
+            </button>
+            <button class="menu-item structure">
+              <p class="menu-item-number">02</p>
+              <p class="menu-item-title">internal structure</p>
+            </button>
+            <button class="menu-item geology">
+              <p class="menu-item-number">03</p>
+              <p class="menu-item-title">surface geology</p>
+            </button>
+          </div>
         </div>
-        <div class="spec-item">
-          <p class="spec-title">Radius</p>
-          <p class="spec-value">2,439.7 km</p>
-        </div>
-        <div class="spec-item">
-          <p class="spec-title">Average temp.</p>
-          <p class="spec-value">58.6<span>&#176;</span>c</p>
+        <div class="spec-section">
+          <div class="spec-item">
+            <p class="spec-title">Rotation time</p>
+            <p class="spec-value">58.6 days</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Revolution time</p>
+            <p class="spec-value">87.97 days</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Radius</p>
+            <p class="spec-value">2,439.7 km</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Average temp.</p>
+            <p class="spec-value">58.6<span>&#176;</span>c</p>
+          </div>
         </div>
       </div>
     </div>
   </main>
+  <script src="./js/index.js"></script>
 </body>
 </html>

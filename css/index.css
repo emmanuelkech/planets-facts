@@ -77,6 +77,7 @@ h1, h2 {
     font-family: var(--header-font);
 }
 
+
 /* Styling Navbar Content */
 .navbar {
     text-transform: uppercase;
@@ -132,14 +133,27 @@ main{
     min-height: 100vh;
 }
 
-.planet-image-section {
-    text-align: center;
-    padding: 2em;
+.planet-internal-image {
+    display: none;
 }
 
-.definition-section{
+.planet-geology {
+    display: none;
 }
 
+.definition-title {
+    color: var(--main-font-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.define {
+    color: var(--sub-font-color);
+}
+
+.structure-container, .geology-container {
+    display: none;
+} 
 
 .menu-item {
     background-color: var(--main-background-color);
@@ -158,6 +172,7 @@ main{
 
 .spec-section {
     margin-top: 2em;
+    height: 50%;
 }
 
 .spec-item {
@@ -173,22 +188,7 @@ main{
 
 .spec-value {
     color: var(--main-font-color);
-    font-weight: bold;
-    margin: 0;
-}
-
-.definition-title {
-    color: var(--main-font-color);
-    font-size: 2em;
-    text-transform: uppercase;
-}
-
-.overview {
-    color: var(--sub-font-color);
-}
-
-.definition-source-section {
-    display: flex;
+    font-weight: bold;    
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -257,6 +257,11 @@ main{
         font-size: 1.2rem;
     }
 
+    /* Styling Toggler */
+    .hamburger-menu {
+        display: none;
+    }
+
     /* Styling Mobile Menu Section */
     .mobile-menu-section {
         display: flex;
@@ -272,12 +277,11 @@ main{
 
     .mobile-menu-section-item {
         padding: 1em;
-        border-bottom: 4px solid var(--mercury-color);
     }
 
-    /* .mobile-menu-section-item :active {
+    .mobile-menu-section-item :active {
         border-bottom: 4px solid var(--mercury-color);
-    } */
+    }
 
     /* Styling Main Section */
     .main-section {
@@ -286,8 +290,30 @@ main{
         padding: 1em;
     }
 
+    .planet-image-section {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .planet-image, .planet-internal-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .planet-geology {
+        position: absolute;
+        bottom: 480px;
+        left: 170px;
+        height: 10%;
+    }
+
     .definition-section {
         text-align: center;
+        margin-top: 5em;
+    }
+
+    .definition-title {    
+        font-size: 2em;
     }
 
     .menu {
@@ -295,13 +321,15 @@ main{
     }
 
     .spec-section {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         grid-gap: 0.5em;
     }
 
     .spec-item {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
     }
 }
 
@@ -330,12 +358,28 @@ main{
         padding: 1.5em;
     }
 
-    .planet-image-section {
+    .planet-geology {
+        position: absolute;
+        bottom: 350px;
+        left: 340px;
+        height: 15%;
     }
+
+    .planet-image-section {
+        display: flex;
+        justify-content: center;
+        padding: 10em;
+    }
+
     .definition-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .definition-title {        
+        font-size: 3em;
+    }
+
     .menu {        
         display: grid;
         grid-gap: 1em;
@@ -392,17 +436,31 @@ main{
     }
 
     .planet-image-section {
+        display: flex;
+        justify-content: center;
+        position: relative;
     }
+
+    .planet-geology {
+        position: absolute;
+        bottom: 100px;
+        left: 300px;
+        height: 20%;
+    }
+
     .definition-section {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center; */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        margin-left: auto;
     }
 
     .definition {
         grid-column: span 2;
+    }
+
+    .definition-title {        
+        font-size: 5em;
     }
 
     .menu {
@@ -413,12 +471,18 @@ main{
         grid-column: span 2;
     }
 
+    .spec-item {        
+        display: flex;
+        flex-direction: column;
+    }
+
     .spec-title {
         font-size: 1em;
     }
 
     .spec-value {
         font-size: 2em;
+        margin-top: auto;
     }
     
 }
