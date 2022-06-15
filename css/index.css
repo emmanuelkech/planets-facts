@@ -5,6 +5,7 @@
     /* Main Colors */
     --main-background-color: #070724;
     --hover-color: #38384F;
+    --fully-opaque: rgba(7,7,36,0);
 
     /* Font and Font Size */
     --header-font: 'Antonio', sans-serif;
@@ -29,8 +30,8 @@
 html, body {
     margin: 0 auto;
     box-sizing: border-box;
-    width: auto;
-    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
     background: url('../assets/background-stars.svg'), var(--main-background-color) no-repeat center center fixed;
     background-size: cover;
     font-family: var(--body-font);
@@ -77,11 +78,24 @@ h1, h2 {
     font-family: var(--header-font);
 }
 
+/* Assigning Fonts */
+.navbar-brand {
+    font-family: var(--header-font);
+}
+
+.definition-title {
+    font-family: var(--header-font);
+}
+
+.spec-value {
+    font-family: var(--header-font);
+}
+
 
 /* Styling Navbar Content */
 .navbar {
     text-transform: uppercase;
-    padding: 1rem;
+    border-bottom: 1px solid var(--sub-font-color);
 }
 
 .navbar-brand-container {
@@ -93,21 +107,11 @@ h1, h2 {
 
 .navbar-brand {
     color: var(--main-font-color);
-    font-size: 1.5em;
 }
 
 .navbar-nav {
+    display: flex;
     text-align: center;
-    height: 100%;
-}
-
-.navbar-nav :active {
-    border-top: 4px solid var(--mercury-color);
-}
-
-.nav-link {
-    color: var(--sub-font-color);
-    padding: 0.2rem;
 }
 
 .navbar-toggler {
@@ -149,6 +153,11 @@ main{
 
 .define {
     color: var(--sub-font-color);
+    margin-top: 2rem;
+}
+
+.source-link {
+    color: var(--sub-font-color);
 }
 
 .structure-container, .geology-container {
@@ -158,14 +167,16 @@ main{
 .menu-item {
     background-color: var(--main-background-color);
     border: 1px solid var(--sub-font-color);
+    cursor: pointer;
+    transition: all 0.15s;
 }
 
-.menu :hover {
+.menu-item:hover {
     border: none;
     background-color: var(--hover-color);
 }
 
-.menu :active {
+.menu-item:focus {
     border: none;
     background-color: var(--mercury-color);
 }
@@ -191,11 +202,12 @@ main{
     font-weight: bold;    
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 599px and down) */
 @media only screen and (max-width: 599px) {
     .navbar {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 1em;
     }
 
     .navbar-toggler {
@@ -204,6 +216,10 @@ main{
         margin-left: auto;
         border: none;
         background-color: transparent;
+    }
+
+    .navbar-brand {        
+        font-size: 1.5em;
     }
    
     .navbar-nav {
@@ -225,6 +241,7 @@ main{
         display: flex;
         justify-content: space-between;
         margin-top: 0.5em;
+        padding: 0.5em 0;
     }
 
     .border {
@@ -266,20 +283,20 @@ main{
     .mobile-menu-section {
         display: flex;
         justify-content: space-between;
-        color: var(--sub-font-color);
         text-transform: uppercase;
-        padding: 0 1rem 0 1rem;
-    }
-
-    .mobile-menu-section :hover {
         border-bottom: 1px solid var(--sub-font-color);
     }
 
     .mobile-menu-section-item {
-        padding: 1em;
+        background-color: var(--main-background-color);
+        color: var(--sub-font-color);
+        text-transform: uppercase;
+        font-family: var(--body-font);
+        border: none;
+        padding: 1em 2em;
     }
 
-    .mobile-menu-section-item :active {
+    .mobile-menu-section-item:focus {
         border-bottom: 4px solid var(--mercury-color);
     }
 
@@ -331,6 +348,11 @@ main{
         justify-content: space-between;
         align-items: baseline;
     }
+
+    .spec-value {
+        font-size: 1.5em;
+        margin: 0;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -343,12 +365,28 @@ main{
         grid-column: span 2;
         margin: 0;
     }
+    .navbar-brand {        
+        font-size: 2em;
+    }
+
     .navbar-nav {
         grid-column: span 2;
         margin: 0;
-        display: flex;
-        justify-content: space-between;   
-        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .nav-link {
+        color: var(--sub-font-color);
+        background-color: var(--fully-opaque);
+        border: none;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .nav-mercury {
+        border-bottom: 4px solid var(--mercury-color);
     }
     
     /* Styling Main Section */
@@ -374,19 +412,24 @@ main{
     .definition-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
     }
 
     .definition-title {        
         font-size: 3em;
     }
 
-    .menu {        
-        display: grid;
-        grid-gap: 1em;
+    .menu {    
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;  
+        padding: 2em 0;
     }
+
     .menu-item {
         text-transform: uppercase;
         display: flex;
+        font-family: var(--body-font);
     }
 
     .menu-item-number {
@@ -396,6 +439,7 @@ main{
     .menu-item-title {
         color: var(--main-font-color);
         margin-left: 1rem;
+        font-weight: bold;
     }
 
     .spec-section {
@@ -411,6 +455,8 @@ main{
 
     .spec-value {
         font-size: 1.2em;
+        margin: 0;
+        padding-top: 0.5em;
     }
 }
 
@@ -423,9 +469,20 @@ main{
         margin-left: auto;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-    }
+    }    
+
     .nav-link {
-        grid-column: span 1;
+        color: var(--sub-font-color);
+        background-color: var(--fully-opaque);
+        border: none;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .nav-mercury {
+        border-top: 4px solid var(--mercury-color);
+        border-bottom: none;
     }
 
     /* Styling Main Section */
@@ -465,6 +522,22 @@ main{
 
     .menu {
         grid-column: span 2;
+    }
+
+    .overview {
+        grid-column: span 3;
+    }
+
+    .structure {
+        grid-column: span 3;
+    }
+
+    .geology {
+        grid-column: span 3;
+    }
+
+    .menu-item {
+        display: flex;
     }
 
     .spec-section {
