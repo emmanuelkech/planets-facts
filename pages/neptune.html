@@ -4,58 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/neptune.css">
   
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
-  Neptune
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="./neptune.html">The Planets</a>
+      </div>
 
-  <!-- Overview Content Start -->
+      <button class="navbar-toggler">
+        <span><img src="../assets/icon-hamburger.svg" alt="" class="navbar-toggler-icon"></span>
+      </button>
 
-  Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar 
-  System, it is the fourth-largest planet by diameter, the third-most-massive planet, 
-  and the densest giant planet. It is 17 times the mass of Earth, more massive than 
-  its near-twin Uranus.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% 
-  to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. 
-  Increasing concentrations of methane, ammonia and water are found in the lower regions.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also 
-  present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in 
-  the red and infrared portion of the spectrum.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune#Atmosphere -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  16.08 Hours
-
-  Revolution Time
-  164.79 Years
-
-  Radius
-  24,622 KM
-
-  Average Temp.
-  -201°c
+      <div class="navbar-nav">
+        <button class="nav-link nav-mercury" onclick="window.location.href='../index.html'">mercury</button>
+        <button class="nav-link nav-venus" onclick="window.location.href='./venus.html'">venus</button> 
+        <button class="nav-link nav-earth" onclick="window.location.href='./earth.html'">earth</button> 
+        <button class="nav-link nav-mars" onclick="window.location.href='./mars.html'">mars</button> 
+        <button class="nav-link nav-jupiter" onclick="window.location.href='./jupiter.html'">jupiter</button> 
+        <button class="nav-link nav-saturn" onclick="window.location.href='./saturn.html'">saturn</button> 
+        <button class="nav-link nav-uranus" onclick="window.location.href='./uranus.html'">uranus</button> 
+        <button class="nav-link nav-neptune" onclick="window.location.href='./neptune.html'">neptune</button> 
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="hamburger-menu">
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-mercury"></button></div>
+        <div class="item-title-container"><a class="item-title" href="../index.html">Mercury</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div> 
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-venus"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./venus.html">Venus</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-earth"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./earth.html">Earth</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-mars"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./mars.html">Mars</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-jupiter"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./jupiter.html">Jupiter</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-saturn"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./saturn.html">Saturn</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-uranus"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./uranus.html">Uranus</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item">
+        <div class="item-color-container"><button class="item-color-neptune"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./neptune.html">Neptune</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="mobile-main">
+      <div class="mobile-menu-section">
+        <button class="mobile-menu-section-item mobile-overview">overview</button>
+        <button class="mobile-menu-section-item mobile-structure">structure</button>
+        <button class="mobile-menu-section-item mobile-surface">surface</button>
+      </div>
+      <div class="main-section">
+        <div class="planet-image-section">
+          <img class="planet-image" src="../assets/planet-neptune.svg" alt="image of neptune">
+          <img class="planet-internal-image" src="../assets/planet-neptune-internal.svg" alt="internal image of neptune">
+          <img class="planet-geology" src="../assets/geology-neptune.png" alt="geology of neptune">
+        </div>
+        <div class="definition-section">
+          <div class="definition">
+            <p class="definition-title">Neptune</p>
+            <div class="overall-container">
+              <div class="overview-container">
+                <p class="the-overview define">Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, more massive than its near-twin Uranus.</p>
+                <div class="define">
+                  <p class="the-overview define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Neptune" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+                </div>
+              </div>
+              <div class="structure-container">
+                <p class="internal-structure define">Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. Increasing concentrations of methane, ammonia and water are found in the lower regions.</p>
+                <p class="internal-structure define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Neptune#Internal_structure" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+              </div>
+              <div class="geology-container">
+                <p class="surface-geology define">Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.</p>
+                <p class="surface-geology define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Neptune#Atmosphere" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <button class="menu-item overview">
+              <p class="menu-item-number">01</p>
+              <p class="menu-item-title">overview</p>
+            </button>
+            <button class="menu-item structure">
+              <p class="menu-item-number">02</p>
+              <p class="menu-item-title">internal structure</p>
+            </button>
+            <button class="menu-item geology">
+              <p class="menu-item-number">03</p>
+              <p class="menu-item-title">surface geology</p>
+            </button>
+          </div>
+        </div>
+        <div class="spec-section">
+          <div class="spec-item">
+            <p class="spec-title">Rotation time</p>
+            <p class="spec-value">16.08 Hours</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Revolution time</p>
+            <p class="spec-value">164.79 Years</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Radius</p>
+            <p class="spec-value">24,622 KM</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Average temp.</p>
+            <p class="spec-value">-201°c</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/index.js"></script>
 </body>
 </html>

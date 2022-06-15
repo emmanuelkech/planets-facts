@@ -4,60 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/saturn.css">
   
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
-  Saturn
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="./saturn.html">The Planets</a>
+      </div>
 
-  <!-- Overview Content Start -->
+      <button class="navbar-toggler">
+        <span><img src="../assets/icon-hamburger.svg" alt="" class="navbar-toggler-icon"></span>
+      </button>
 
-  Saturn is the sixth planet from the Sun and the second-largest in the Solar 
-  System, after Jupiter. It is a gas giant with an average radius of about 
-  nine and a half times that of Earth. It only has one-eighth the average 
-  density of Earth.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Despite consisting mostly of hydrogen and helium, most of Saturn's mass 
-  is not in the gas phase, because hydrogen becomes a non-ideal liquid 
-  when the density is above 0.01 g/cm3, which is reached at a radius 
-  containing 99.9% of Saturn's mass.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% 
-  helium by volume. The planet's most famous feature is its prominent ring 
-  system, which is composed mostly of ice particles with a smaller amount 
-  of rocky debris and dust. 
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Atmosphere -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  10.8 Hours
-
-  Revolution Time
-  29.46 Years
-
-  Radius
-  58,232 KM
-
-  Average Temp.
-  -138°c
+      <div class="navbar-nav">
+        <button class="nav-link nav-mercury" onclick="window.location.href='../index.html'">mercury</button>
+        <button class="nav-link nav-venus" onclick="window.location.href='./venus.html'">venus</button> 
+        <button class="nav-link nav-earth" onclick="window.location.href='./earth.html'">earth</button> 
+        <button class="nav-link nav-mars" onclick="window.location.href='./mars.html'">mars</button> 
+        <button class="nav-link nav-jupiter" onclick="window.location.href='./jupiter.html'">jupiter</button> 
+        <button class="nav-link nav-saturn" onclick="window.location.href='./saturn.html'">saturn</button> 
+        <button class="nav-link nav-uranus" onclick="window.location.href='./uranus.html'">uranus</button> 
+        <button class="nav-link nav-neptune" onclick="window.location.href='./neptune.html'">neptune</button> 
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="hamburger-menu">
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-mercury"></button></div>
+        <div class="item-title-container"><a class="item-title" href="../index.html">Mercury</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div> 
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-venus"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./venus.html">Venus</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-earth"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./earth.html">Earth</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-mars"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./mars.html">Mars</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-jupiter"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./jupiter.html">Jupiter</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-saturn"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./saturn.html">Saturn</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item border">
+        <div class="item-color-container"><button class="item-color-uranus"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./uranus.html">Uranus</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+      <div class="hamburger-menu-item">
+        <div class="item-color-container"><button class="item-color-neptune"></button></div>
+        <div class="item-title-container"><a class="item-title" href="./neptune.html">Neptune</a></div>
+        <div class="item-icon-container"><img class="item-icon" src="../assets/icon-chevron.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="mobile-main">
+      <div class="mobile-menu-section">
+        <button class="mobile-menu-section-item mobile-overview">overview</button>
+        <button class="mobile-menu-section-item mobile-structure">structure</button>
+        <button class="mobile-menu-section-item mobile-surface">surface</button>
+      </div>
+      <div class="main-section">
+        <div class="planet-image-section">
+          <img class="planet-image" src="../assets/planet-saturn.svg" alt="image of saturn">
+          <img class="planet-internal-image" src="../assets/planet-saturn-internal.svg" alt="internal image of saturn">
+          <img class="planet-geology" src="../assets/geology-saturn.png" alt="geology of saturn">
+        </div>
+        <div class="definition-section">
+          <div class="definition">
+            <p class="definition-title">Saturn</p>
+            <div class="overall-container">
+              <div class="overview-container">
+                <p class="the-overview define">Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.</p>
+                <div class="define">
+                  <p class="the-overview define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Saturn" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+                </div>
+              </div>
+              <div class="structure-container">
+                <p class="internal-structure define">Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase, because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at a radius containing 99.9% of Saturn's mass.</p>
+                <p class="internal-structure define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Saturn#Internal_structure" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+              </div>
+              <div class="geology-container">
+                <p class="surface-geology define">The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust.</p>
+                <p class="surface-geology define">Source: <a class="source-link" href="https://en.wikipedia.org/wiki/Saturn#Atmosphere" target="_blank">Wikipedia </a><span><img src="../assets/icon-source.svg" alt=""></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <button class="menu-item overview">
+              <p class="menu-item-number">01</p>
+              <p class="menu-item-title">overview</p>
+            </button>
+            <button class="menu-item structure">
+              <p class="menu-item-number">02</p>
+              <p class="menu-item-title">internal structure</p>
+            </button>
+            <button class="menu-item geology">
+              <p class="menu-item-number">03</p>
+              <p class="menu-item-title">surface geology</p>
+            </button>
+          </div>
+        </div>
+        <div class="spec-section">
+          <div class="spec-item">
+            <p class="spec-title">Rotation time</p>
+            <p class="spec-value">10.8 Hours</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Revolution time</p>
+            <p class="spec-value">29.46 Years</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Radius</p>
+            <p class="spec-value">58,232 KM</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-title">Average temp.</p>
+            <p class="spec-value">-138°c</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/index.js"></script>
 </body>
 </html>

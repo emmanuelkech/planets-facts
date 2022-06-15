@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+:root {
+    /* Main Colors */
+    --main-background-color: #070724;
+    --hover-color: #38384F;
+    --fully-opaque: rgba(7,7,36,0);
+
+    /* Font and Font Size */
+    --header-font: 'Antonio', sans-serif;
+    --body-font: 'League Spartan', sans-serif;
+
+    /* Font Colors */
+    --main-font-color: #FFFFFF;
+    --sub-font-color: #838391;
+
+    /* Planet Theme Colors */
+    --mercury-color: #419EBB;
+    --venus-color: #EDA249;
+    --earth-color: #6F2ED6;
+    --mars-color: #D14C32;
+    --jupiter-color: #D83A34;
+    --saturn-color: #CD5120;
+    --uranus-color: #1EC2A4;
+    --neptune-color: #2D68F0;
+
+}
+
+html, body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: url('../assets/background-stars.svg'), var(--main-background-color) no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--body-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Assigning Colors To Hamburger Menu Items */
+.item-color-mercury {
+    background-color: var(--mercury-color);
+}
+
+.item-color-venus {
+    background-color: var(--venus-color);
+}
+
+.item-color-earth {
+    background-color: var(--earth-color);
+}
+
+.item-color-mars {
+    background-color: var(--mars-color);
+}
+
+.item-color-jupiter {
+    background-color: var(--jupiter-color);
+}
+
+.item-color-saturn {
+    background-color: var(--saturn-color);
+}
+
+.item-color-uranus {
+    background-color: var(--uranus-color);
+}
+
+.item-color-neptune {
+    background-color: var(--neptune-color);
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+/* Assigning Fonts */
+.navbar-brand {
+    font-family: var(--header-font);
+}
+
+.definition-title {
+    font-family: var(--header-font);
+}
+
+.spec-value {
+    font-family: var(--header-font);
+}
+
+
+/* Styling Navbar Content */
+.navbar {
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--sub-font-color);
+}
+
+.navbar-brand-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    margin: auto;
+}
+
+.navbar-brand {
+    color: var(--main-font-color);
+}
+
+.navbar-nav {
+    display: flex;
+    text-align: center;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.mobile-menu-section {
+    display: none;
+}
+
+/* Styling Main Section */
+main{
+    width: auto;
+    min-height: 100vh;
+}
+
+.main-section {
+    width: auto;
+    min-height: 100vh;
+}
+
+.planet-internal-image {
+    display: none;
+}
+
+.planet-geology {
+    display: none;
+}
+
+.definition-title {
+    color: var(--main-font-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.define {
+    color: var(--sub-font-color);
+    margin-top: 2rem;
+}
+
+.source-link {
+    color: var(--sub-font-color);
+}
+
+.structure-container, .geology-container {
+    display: none;
+} 
+
+.menu-item {
+    background-color: var(--main-background-color);
+    border: 1px solid var(--sub-font-color);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.menu-item:hover {
+    border: none;
+    background-color: var(--hover-color);
+}
+
+.menu-item:focus {
+    border: none;
+    background-color: var(--jupiter-color);
+}
+
+.spec-section {
+    margin-top: 2em;
+    height: 50%;
+}
+
+.spec-item {
+    border: 1px solid var(--sub-font-color);
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.spec-title {
+    color: var(--sub-font-color);
+    margin: 0;
+}
+
+.spec-value {
+    color: var(--main-font-color);
+    font-weight: bold;    
+}
+
+/* Extra small devices (phones, 599px and down) */
+@media only screen and (max-width: 599px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1em;
+    }
+
+    .navbar-toggler {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        border: none;
+        background-color: transparent;
+    }
+
+    .navbar-brand {        
+        font-size: 1.5em;
+    }
+   
+    .navbar-nav {
+        display: none;
+    }
+
+    /* Styling Hamburger Menu Items */
+    .hamburger-menu {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        text-transform: uppercase;
+        padding: 2em;
+        background-color: var(--main-background-color);
+    }
+
+    .hamburger-menu-item {
+        grid-column: span 8;
+        max-width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5em;
+        padding: 0.5em 0;
+    }
+
+    .border {
+        border-bottom: 1px solid var(--sub-font-color);
+    }
+
+    .item-color-mercury, .item-color-venus, .item-color-earth, .item-color-mars, .item-color-jupiter, .item-color-saturn, .item-color-uranus, .item-color-neptune {
+        border: none;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+    }
+
+    .item-color-container {
+        margin-right: 0.5rem;
+    }
+
+    .item-title-container {
+        margin-right: auto;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .item-icon-container {
+        padding: 0.5rem;
+    }
+
+    .item-title {
+        color: var(--main-font-color);
+        font-size: 1.2rem;
+    }
+
+    /* Styling Toggler */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Styling Mobile Menu Section */
+    .mobile-menu-section {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--sub-font-color);
+    }
+
+    .mobile-menu-section-item {
+        background-color: var(--main-background-color);
+        color: var(--sub-font-color);
+        text-transform: uppercase;
+        font-family: var(--body-font);
+        border: none;
+        padding: 1em 2em;
+    }
+
+    .mobile-menu-section-item:focus {
+        border-bottom: 4px solid var(--jupiter-color);
+    }
+
+    /* Styling Main Section */
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .planet-image-section {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .planet-image, .planet-internal-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .planet-geology {
+        position: absolute;
+        bottom: 480px;
+        left: 170px;
+        height: 10%;
+    }
+
+    .definition-section {
+        text-align: center;
+        margin-top: 5em;
+    }
+
+    .definition-title {    
+        font-size: 2em;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .spec-section {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0.5em;
+    }
+
+    .spec-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .spec-value {
+        font-size: 1.5em;
+        margin: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar-brand-container {
+        grid-column: span 2;
+        margin: 0;
+    }
+    .navbar-brand {        
+        font-size: 2em;
+    }
+
+    .navbar-nav {
+        grid-column: span 2;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .nav-link {
+        color: var(--sub-font-color);
+        background-color: var(--fully-opaque);
+        border: none;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .nav-jupiter {
+        border-bottom: 4px solid var(--jupiter-color);
+    }
+    
+    /* Styling Main Section */
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .planet-geology {
+        position: absolute;
+        bottom: 350px;
+        left: 340px;
+        height: 15%;
+    }
+
+    .planet-image-section {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    .definition-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+
+    .definition-title {        
+        font-size: 3em;
+    }
+
+    .menu {    
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;  
+        padding: 2em 0;
+    }
+
+    .menu-item {
+        text-transform: uppercase;
+        display: flex;
+        font-family: var(--body-font);
+    }
+
+    .menu-item-number {
+        color: var(--sub-font-color);
+        margin-left: 1rem;
+    }
+    .menu-item-title {
+        color: var(--main-font-color);
+        margin-left: 1rem;
+        font-weight: bold;
+    }
+
+    .spec-section {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
+
+    .spec-title {
+        font-size: 0.8em;
+    }
+
+    .spec-value {
+        font-size: 1.2em;
+        margin: 0;
+        padding-top: 0.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .navbar {
+        display: flex;
+    }
+    .navbar-nav {
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }    
+
+    .nav-link {
+        color: var(--sub-font-color);
+        background-color: var(--fully-opaque);
+        border: none;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .nav-jupiter {
+        border-top: 4px solid var(--jupiter-color);
+        border-bottom: none;
+    }
+
+    /* Styling Main Section */
+    .main-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4em;
+    }
+
+    .planet-image-section {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .planet-geology {
+        position: absolute;
+        bottom: 100px;
+        left: 300px;
+        height: 20%;
+    }
+
+    .definition-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        margin-left: auto;
+    }
+
+    .definition {
+        grid-column: span 2;
+    }
+
+    .definition-title {        
+        font-size: 5em;
+    }
+
+    .menu {
+        grid-column: span 2;
+    }
+
+    .overview {
+        grid-column: span 3;
+    }
+
+    .structure {
+        grid-column: span 3;
+    }
+
+    .geology {
+        grid-column: span 3;
+    }
+
+    .menu-item {
+        display: flex;
+    }
+
+    .spec-section {
+        grid-column: span 2;
+    }
+
+    .spec-item {        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spec-title {
+        font-size: 1em;
+    }
+
+    .spec-value {
+        font-size: 2em;
+        margin-top: auto;
+    }
+    
+}
